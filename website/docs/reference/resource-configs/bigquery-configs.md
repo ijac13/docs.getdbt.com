@@ -44,7 +44,7 @@ The `partition_by` config can be supplied as a dictionary with the following for
 ```python
 {
   "field": "<field name",
-  "data_type": "<timestamp | date | datetime | int64 >",
+  "data_type": "<timestamp | date | int64 >",
 
   # Only required if data_type is "int64"
   "range": {
@@ -56,7 +56,7 @@ The `partition_by` config can be supplied as a dictionary with the following for
 ```
 
 #### Partitioning by a date or timestamp
-If the `data_type` is specified as `timestamp` or `datetime`, dbt will wrap
+If the `data_type` is specified as `timestamp`, dbt will wrap
 the specfied `field` in a `DATE()` function when configuring table partitioning.
 
 If the `data_type` is specified as a `date`, dbt will supply the field as-is
